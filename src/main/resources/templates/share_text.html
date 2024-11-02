@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/main}">
+<body>
+<main layout:fragment="content" class="container mt-10 flex justify-center">
+    <div class="max-w-2xl w-full">
+        <!-- Sharing Code - xxxx -->
+        <div class="flex-1 mb-3.5 items-center text-2xl">
+            <p class="text-gray-500">Sharing Code - <span class="font-bold text-accent">qmrg</span></p>
+        </div>
+        <!-- Header with viewers and expiration -->
+        <div class="flex justify-between mb-4 items-center text-sm">
+            <p class="text-neutral">Viewers (live) - <span  id="viewer">1</span></p>
+            <p class="text-gray-400">Expire At: 03:21:53</p>
+        </div>
+
+        <!-- Textarea -->
+        <label for="textarea"></label>
+        <textarea placeholder="Hi 👋 You can type something here to share"
+                  rows="6" id="textarea"
+                  class="mb-3.5 textarea textarea-bordered textarea-lg w-full max-w-2xl bg-gray-200 text-gray-800"></textarea>
+        <div class="flex justify-between mb-4 items-center">
+            <div>
+                <button class="btn btn-outline btn-sm">Share</button>
+                <button class="btn btn-outline btn-sm hidden">Copy Text</button>
+            </div>
+            <div class="form-control">
+                <label class="label cursor-pointer">
+                    <span class="label-text mr-1.5 text-error font-semibold">Viewers can edit the data</span>
+                    <input type="checkbox" class="toggle toggle-sm"/>
+                </label>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<th:block layout:fragment="script-content">
+    <!-- Add additional scripts there that are only needed for this page (Application wide scripts should be added in layout/main.html) -->
+
+</th:block>
+</body>
+</html>
+<!--        <div>-->
+<!--            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 20">-->
+<!--                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M1 6v8a5 5 0 1 0 10 0V4.5a3.5 3.5 0 1 0-7 0V13a2 2 0 0 0 4 0V6"/>-->
+<!--            </svg>-->
+<!--            <span class="sr-only">Attach file</span>-->
+<!--        </div>-->
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/main}">
+<body>
+<main layout:fragment="content" class="flex items-center justify-center mt-10">
+    <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-full max-w-lg">
+        <!-- Upload Section -->
+        <div class="border-2 border-dashed border-blue-400 rounded-lg p-10 text-center mb-6">
+            <div class="flex flex-col items-center">
+                <div class="bg-blue-400 text-white rounded-full p-3 mb-2">
+                    <!-- Icon (You could use SVG here if preferred) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <line id="primary" x1="12" y1="16" x2="12" y2="3" style="fill: none;  stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line>
+                        <polyline id="primary-2" data-name="primary" points="16 7 12 3 8 7" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20,16v4a1.08,1.08,0,0,1-1.14,1H5.14A1.08,1.08,0,0,1,4,20V16" style="fill: none;  stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" />
+                    </svg>
+                </div>
+                <p class="text-blue-600 font-semibold"><a href="#" class="underline">Click to upload</a> or drag and drop.</p>
+            </div>
+        </div>
+
+        <!-- Files Section -->
+        <div class="space-y-4">
+            <!-- File 1 -->
+            <div class="flex items-start justify-between bg-blue-50 p-3 rounded-lg">
+                <div class="flex items-start">
+                    <div class="text-blue-400 mr-2">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10m-7 4h7M5 5v14l7-3 7 3V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-blue-800">Test_1_input.txt</p>
+                        <p class="text-gray-500 text-sm">14 Bytes</p>
+                        <a href="#" class="text-blue-500 underline text-sm">Download</a>
+                    </div>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                    <!-- Close Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- File 2 -->
+            <div class="flex items-start justify-between bg-blue-50 p-3 rounded-lg">
+                <div class="flex items-start">
+                    <div class="text-blue-400 mr-2">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10m-7 4h7M5 5v14l7-3 7 3V5a2 2 0 00-2-2H7a2 2 0 00-2 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-blue-800">Test_1_output.txt</p>
+                        <p class="text-gray-500 text-sm">2 Bytes</p>
+                        <a href="#" class="text-blue-500 underline text-sm">Download</a>
+                    </div>
+                </div>
+                <button class="text-gray-400 hover:text-red-500">
+                    <!-- Close Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<th:block layout:fragment="script-content">
+    <!-- Add additional scripts there that are only needed for this page (Application wide scripts should be added in layout/main.html) -->
+<!--<script></script>-->
+</th:block>
+</body>
+</html>
+
