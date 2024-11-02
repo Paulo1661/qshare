@@ -19,20 +19,8 @@ public class HomeController {
         return "share_text";
     }
 
-    @HxRequest
-    @GetMapping("/share-text")
-    public String htmxShareTextIndex(Model model) {
-        return "share_text::main";
-    }
-
     @GetMapping("/share-files")
     public String shareFilesIndex(Model model) {
         return "share_files";
-    }
-
-    @HxRequest
-    @GetMapping("/share-files")
-    public String htmxShareFilesIndex(Model model) {
-        return "share_files::main";
     }
 }

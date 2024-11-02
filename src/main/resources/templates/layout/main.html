@@ -10,10 +10,10 @@
 
 </head>
 <body class="no-scrollbar overflow-y-scroll">
-<div class="navbar bg-base-100"  x-data="{ activePage: 'home' }">
+<div class="navbar bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-active btn-ghost lg:hidden">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-5 w-5"
@@ -30,51 +30,21 @@
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 <li>
-                    <a th:href="@{/share-text}"
-                       hx:get="@{/share-text}"
-                       hx-swap="outerHTML"
-                       hx-trigger="click"
-                       hx-target="main"
-                       hx-push-url="true"
-                       @click="$el.blur(); activePage='share-text'">Share text</a>
+                    <a th:href="@{/share-text}">Share text</a>
                 </li>
-                <li><a th:href="@{/share-files}"
-                       hx:get="@{/share-files}"
-                       hx-swap="outerHTML"
-                       hx-trigger="click"
-                       hx-target="main"
-                       hx-push-url="true"
-                       @click="$el.blur(); activePage='share-files'">Share files</a>
+                <li><a th:href="@{/share-files}">Share files</a>
                 </li>
             </ul>
         </div>
-        <a id="logo" class="btn btn-ghost text-3xl" th:href="@{/}" @click="activePage='home'">qshare.io</a>
+        <a id="logo" class="btn btn-ghost text-3xl" th:href="@{/}">qshare.io</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
             <li>
-                <a th:href="@{/share-text}"
-                   hx:get="@{/share-text}"
-                   hx-swap="outerHTML"
-                   hx-trigger="click"
-                   hx-target="main"
-                   hx-push-url="true"
-                   @click="activePage='share-text'"
-                   :class="{ 'underline': activePage === 'share-text' }">
-                    Share text
-                </a>
+                <a th:href="@{/share-text}">Share text</a>
             </li>
             <li>
-                <a th:href="@{/share-files}"
-                   hx:get="@{/share-files}"
-                   hx-swap="outerHTML"
-                   hx-trigger="click"
-                   hx-target="main"
-                   hx-push-url="true"
-                   @click="activePage='share-files'"
-                   :class="{ 'underline': activePage === 'share-files' }">
-                    Share files
-                </a>
+                <a th:href="@{/share-files}">Share files</a>
             </li>
         </ul>
     </div>
