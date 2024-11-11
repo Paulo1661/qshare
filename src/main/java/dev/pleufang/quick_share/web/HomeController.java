@@ -14,12 +14,12 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/share-text")
+    @GetMapping("/text")
     public String shareTextIndex(Model model) {
         return "share_text";
     }
 
-    @GetMapping("/share-files")
+    @GetMapping("/files")
     public String shareFilesIndex(Model model) {
         return "share_files";
     }
