@@ -7,33 +7,20 @@
 <body>
 <main layout:fragment="content" class="container mt-10 flex justify-center">
     <div class="max-w-2xl w-full">
-        <!-- Sharing Code - xxxx -->
-        <div th:if="${sessionCode != ''}" th:id="sharing-link" th:fragment="sharing-link" class="flex-1 mb-3.5 items-center text-2xl" hx-swap-oob="true">
-            <p class="text-gray-500">Sharing Link - <span class="font-bold text-accent" th:text="'qhare.io/' + ${sessionCode}">qhare.io/qmrg</span></p>
-        </div>
-        <div th:if="${sessionCode == ''}" id="sharing-link"></div>
-
         <!-- Header with viewers and expiration -->
         <div class="flex justify-between mb-4 items-center text-sm">
             <p class="text-neutral">Viewers (live) - <span  id="viewer">1</span></p>
             <p class="text-gray-400">Expire At: 03:21:53</p>
         </div>
 
-        <!-- Textarea -->
+        <!-- Textarea Readonly -->
         <label for="textarea"></label>
-        <textarea placeholder="Hi 👋 You can type something here to share"
+        <textarea readonly th:text="'Paul is the best'"
                   rows="6" id="textarea"
                   class="mb-3.5 textarea textarea-bordered textarea-lg w-full max-w-2xl bg-gray-200 text-gray-800"></textarea>
         <div class="flex justify-between mb-4 items-center">
             <div>
-                <button th:unless="${sessionCode != ''}" class="btn btn-outline btn-sm" hx:get="@{/text}" hx-push-url="true" hx-swap="outerHTML">Share</button>
-                <button th:if="${sessionCode != ''}" th:fragment="copy-text-btn" class="btn btn-outline btn-sm">Copy Text</button>
-            </div>
-            <div class="form-control">
-                <label class="label cursor-pointer">
-                    <span class="label-text mr-1.5 text-error font-semibold">Viewers can edit the data</span>
-                    <input type="checkbox" class="toggle toggle-sm"/>
-                </label>
+                <button th:fragment="copy-text-btn" class="btn btn-outline btn-sm">Copy Text</button>
             </div>
         </div>
     </div>
@@ -43,7 +30,7 @@
 <th:block layout:fragment="script-content">
     <!-- Add additional scripts there that are only needed for this page (Application wide scripts should be added in layout/main.html) -->
 <script>
-
+    
 </script>
 </th:block>
 </body>
